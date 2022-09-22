@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="../css/saurav_product.css" />
+
+<div class="container">
+	<div class="mainFlex">
+		<input type="button" value="< Back" id="backBtn" onclick="back()" />
+	</div>
+</div>
+
+<div class="container">
+	<div class="mainFlex">
+		<div class="form">
+			<div class="upper">
+				<label for="product">Product Form</label>
+				<form id="product">
+					<input type="hidden" id="dataHidden" />
+					<input
+						type="text"
+						id="productName"
+						onkeyup="check(this.value, 'validateProdName', 'Product Name')"
+						placeholder="Enter Product Name"
+					/>
+					<span id="validateProdName"> </span>
+					<br />
+
+					<input
+						type="number"
+						id="productPrice"
+						onkeyup="check(this.value, 'validateProdPrice', 'Product Price')"
+						placeholder="Enter Product Price"
+					/>
+					<span id="validateProdPrice"> </span>
+					<br />
+
+					<input
+						type="number"
+						id="productQuantity"
+						onkeyup="check(this.value, 'validateProdQuantity', 'Product Quantity')"
+						placeholder="Enter Product Quantity"
+					/>
+					<span id="validateProdQuantity"></span>
+					<br />
+
+					<div class="buttons">
+						<input
+							type="button"
+							id="insertBtn"
+							value="Add"
+							onclick="insert()"
+						/>
+						<input type="reset" id="resetBtn" value="Clear" />
+					</div>
+					<br />
+
+					<div class="searchBar">
+						<label id="searchRange" for="searchData"> Search </label>
+						<input
+							type="range"
+							min=""
+							onchange="search(this.value, this.min, this.max)"
+							max=""
+							id="searchData"
+						/>
+						<label for="searchData" id="outputSearch"> 0 </label>
+					</div>
+					<br />
+				</form>
+			</div>
+
+			<div class="lower">
+				<label for="productTable">Product List</label>
+				<table id="productTable"></table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="../js/saurav_product.js"></script>

@@ -1,0 +1,41 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.container {
+	width: 1170px;
+	margin: 0px auto;
+}
+
+.mainFlex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.upper {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.upper h2 {
+	color: black;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 2;
+	letter-spacing: -0.1px;
+}
+
+.lower {
+	padding: 10px;
+}
+
+.lower input {
+	margin: 10px;
+	padding: 10px;
+	flex-basis: 30%;
+	font-size: 16px;
+	border: 1px solid white;
+	border-radius: 50px;
+	background-color: lightgreen;
+}

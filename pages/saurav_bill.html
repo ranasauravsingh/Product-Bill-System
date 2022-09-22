@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../css/saurav_bill.css" />
+
+<div class="container">
+	<div class="mainFlex">
+		<input type="button" value="< Back" id="backBtn" onclick="back()" />
+	</div>
+</div>
+
+<div class="container">
+	<div class="mainFlex">
+		<div class="form">
+			<div class="upper">
+				<label for="product">Bill Form</label>
+				<form id="bill">
+					<input
+						type="number"
+						id="billNumber"
+						onkeyup="check(this.value, 'validateBillNum', 'Bill Number')"
+						placeholder="Enter Bill Number"
+					/>
+					<span id="validateBillNum"> </span>
+					<br />
+
+					<input
+						type="text"
+						id="customerName"
+						onkeyup="check(this.value, 'validateCustName', 'Customer Name')"
+						placeholder="Enter Customer Name"
+					/>
+					<span id="validateCustName"> </span>
+				</form>
+				<label for="productTable">Product List</label>
+				<table id="productTable"></table>
+				<br />
+				<div class="buttons">
+					<input type="button" id="insertBtn" value="Add" onclick="insert()" />
+					<input type="reset" id="resetBtn" value="Clear" />
+				</div>
+				<div class="searchBar">
+					<label id="searchRange" for="searchData"> Search </label>
+					<input
+						type="range"
+						min=""
+						onchange="search(this.value, this.min, this.max)"
+						max=""
+						id="searchData"
+					/>
+					<label for="searchData" id="outputSearch"> 0 </label>
+				</div>
+				<br />
+			</div>
+
+			<div class="lower">
+				<label for="productTable">Bill List</label>
+				<table id="billTable"></table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="../js/saurav_bill.js"></script>

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./css/saurav_productBill.css" />
+
+<div class="container">
+	<div class="mainFlex">
+		<div class="form">
+			<div class="upper">
+				<h2>Which list you want to manipulate ?</h2>
+			</div>
+			<div class="lower">
+				<div class="mainFlex">
+					<input
+						type="button"
+						value="Product"
+						id="productBtn"
+						onclick="productList()"
+						class="logProduct"
+					/>
+					<input
+						type="button"
+						value="Bill"
+						id="billBtn"
+						onclick="billList()"
+						class="logBill"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function productList() {
+		location.href = "./pages/saurav_product.html";
+	}
+
+	function billList() {
+		location.href = "./pages/saurav_bill.html";
+	}
+</script>
